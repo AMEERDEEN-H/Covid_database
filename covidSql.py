@@ -8,22 +8,22 @@ mydb=mysql.connector.connect(
 mycursor=mydb.cursor()
 # mycursor.execute("create table cases_data(name varchar(100),age int,gender varchar(50),address varchar(200),ph_num DOUBLE PRIMARY KEY, covid_status varchar(200), state varchar(50),zone varchar(50), status varchar(200) )")
 # print("successfully table created")
-# def Cases_about():
-#     print("****Cases regsiter  in India*****")
-#     sql="insert into cases_data(name,age,gender,address,ph_num,covid_status,state,zone,status) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-#     name=input("enter your Name: ").upper()
-#     age=int(input("enter your Age: "))
-#     gender=input("enter gender:").upper()
-#     address=input("enter your ADDRESS: ").upper()
-#     ph=int(input("enter ph_num: "))
-#     covid=input("enter positive or negative: ").upper()
-#     state=input("enter state name : ").upper()
-#     zone=input("enter Zone where are you:  ").upper()
-#     status=input("normal or treatment: ").upper()
-#     val=(name,age,gender,address,ph,covid,state,zone,status)
-#     mycursor.execute(sql,val)
-#     mydb.commit()
-#     print("data saved suuceesfuuly")
+def Cases_about():
+    print("****Cases regsiter  in India*****")
+    sql="insert into cases_data(name,age,gender,address,ph_num,covid_status,state,zone,status) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    name=input("enter your Name: ").upper()
+    age=int(input("enter your Age: "))
+    gender=input("enter gender:").upper()
+    address=input("enter your ADDRESS: ").upper()
+    ph=int(input("enter ph_num: "))
+    covid=input("enter positive or negative: ").upper()
+    state=input("enter state name : ").upper()
+    zone=input("enter Zone where are you:  ").upper()
+    status=input("normal or treatment: ").upper()
+    val=(name,age,gender,address,ph,covid,state,zone,status)
+    mycursor.execute(sql,val)
+    mydb.commit()
+    print("data saved suuceesfuuly")
     
 def view_about1():
     print("****Cases History in District Wise in India*****")
